@@ -1,0 +1,374 @@
+/* ======== Global Styles ======== */
+:root {
+    --primary-color: #192A56; /* Azra9 Ghamemg */
+    --secondary-color: #f4f4f4; /* Rmèdi Fete7 */
+    --accent-color: #f39c12;   /* Orange */
+    --text-color: #333;
+    --light-text-color: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ======== 1. El Menu (Navbar) ======== */
+.navbar {
+    background-color: var(--light-text-color);
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav li {
+    margin-left: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ======== 2. El Waجهة (Hero Section) ======== */
+.hero {
+    color: var(--light-text-color);
+    height: 100vh;
+    position: relative; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out; 
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 42, 86, 0.7); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* ======== Buttons (Donation/Volunteer) ======== */
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 2px solid var(--accent-color);
+}
+.btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--light-text-color);
+    border: 2px solid var(--light-text-color);
+}
+.btn-secondary:hover {
+    background-color: var(--light-text-color);
+    color: var(--primary-color);
+}
+
+/* ======== 3. El Sections (El Parties) ======== */
+.section {
+    padding: 100px 0; 
+}
+
+.alternate-bg {
+    background-color: var(--secondary-color);
+}
+
+.section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* ======== HEDHA EL CODE JDID (Problem / Mission) ======== */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espace bin taswira w text */
+}
+
+.content-image {
+    flex: 1;
+}
+
+.content-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content-text {
+    flex: 1.2; /* Natiw el text espace akther chwaya */
+}
+
+/* Hèdhi bch n9albou el layout fel section 'Mission' */
+.content-wrapper.reversed {
+    flex-direction: row-reverse;
+}
+
+/* HEDHA EL CODE TBADDEL (Problem Text) */
+.problem-text {
+    font-size: 18px;
+    text-align: left; /* Baddalneh mil 'center' */
+    margin: 0; /* Na7ina el 'margin: 0 auto' */
+    line-height: 1.8;
+}
+/* ======== FIN EL CODE JDID ======== */
+
+
+/* ======== 5. Style mte3 el Section "Get Involved" ======== */
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.engage-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.engage-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--primary-color); 
+}
+
+.engage-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.engage-card h3 .emoji {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.engage-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.engage-card li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.engage-card li::before {
+    content: '✔'; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color); 
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.engage-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.engage-card a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ======== 6. Contact Section ======== */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-info p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.contact-info p strong {
+    color: var(--primary-color);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+.contact-form .btn {
+    margin-top: 20px;
+    width: fit-content;
+}
+
+#contact.section {
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
+/* ======== 7. El Footer ======== */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding-top: 40px; 
+    margin-top: 0;
+}
+
+.social-media {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 30px;
+}
+
+.social-media h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+footer .copyright {
+    margin: 0;
+    padding-bottom: 30px; 
+}
